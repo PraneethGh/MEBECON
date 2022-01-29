@@ -1,0 +1,53 @@
+{% extends 'layout.html'%}
+
+{% block contenta %}
+<div class="contenta">
+<div class="container" >
+<div class="card text-center">
+    <!-- <div class="card-body" >
+        <br><br><br>
+      <h2 class="text">MEBECON</h2>
+      <h4>Disease prediction and classification app</h4>
+      <br>
+      <H3 class="text1">Enjoy your time here!</H3>
+      <br><br>
+      <a href="http://127.0.0.1:5000/medical" class="btn btn-primary">LETS GO!</a>
+    </div> -->
+  </div>
+</div>
+</div>
+<br><div style="text-align: center;"><span class="t1">{{categ}}</span></div><br><br>
+{% for i in result:%}
+<div class="info">
+    <span class="t"> Name of clinic:
+        {{i[2]}}
+    </span>
+    <br>
+    <span class="t"> Phone Number:
+        {{i[3]}}
+    </span>
+    <br>
+    <span class="t"> Address:
+        {{i[4]}}
+    </span>
+    <br>
+    <span class="t"> Operating Hours:
+        {{i[5]}}
+    </span>
+    <br>
+    <span class="t"> Rating:
+        {{i[6]}}
+    </span>
+    <br><br>
+</div>
+{%endfor%}
+<div  align="center" class="im">
+ <!---<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1056306558-1-1562871371.jpg?crop=0.425xw:0.974xh;0.515xw,0.00373xh&resize=640:*" height=250px width=600px; >-->
+</div>
+<!-- <br><br><br><br><br><br><br> -->
+<!-- <marquee style="font-size:18px;background-color:#20B2AA;color:black;font-weight:bold;"direction="alternate right" scrolldelay=10>Not feeling well? Let's check out what your disease is</marquee> -->
+
+<script src="{{url_for('static',filename='main.js')}}"></script>
+{% endblock contenta %}
+{%block contentb%} 
+{%endblock contentb%}

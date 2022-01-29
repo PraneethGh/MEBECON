@@ -1,0 +1,26 @@
+{% extends 'layout.html'%}
+
+{% block contenta %}
+<div class="contenta">
+<div class="container" >
+<div class="card text-center">
+  </div>
+</div>
+</div>
+<div  align="center" class="im">
+ <!---<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1056306558-1-1562871371.jpg?crop=0.425xw:0.974xh;0.515xw,0.00373xh&resize=640:*" height=250px width=600px; >-->
+</div>
+<div class="t2"> <span>Recommended Youtube Video Links</span></div><br><br><br>
+<div class="anc">
+  {%- for line in vids %}
+    <a class="vid-btn" href="https://www.youtube.com/watch?v={{ line -}}">CLICK TO SEE VIDEO</a>
+    <br><br><br>
+  {% endfor %}
+</div>
+
+<br><br><br><br><br><br><br>
+
+<script src="{{url_for('static',filename='main.js')}}"></script>
+{% endblock contenta %}
+{%block contentb%} 
+{%endblock contentb%}

@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{% block contenta %}
+
+<br><br>
+<div id="controls">
+    
+
+   </div>
+    </div>
+    <br><br>
+
+    <form action="{{ url_for('medical')}}" method="post" name="form">
+        <input type="text" name="Symptom" placeholder="Enter Symptoms" required="required" />
+        <button type="submit" class="btn">Predict</button>
+    </form>
+    <br><br>
+   <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+   <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+   <script src="{{ url_for('main_js')}}"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{% endblock contenta %}

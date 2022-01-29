@@ -1,0 +1,218 @@
+.contenta .card-body{
+    background-color:#20B2AA;
+    border:2px solid silver;
+    color: black;
+    font-weight:bold;
+}
+/*.contenta a{
+    font-size:30px;
+}*/
+.text{
+font-size:50px;
+font-weight:bold;
+}
+.text1{
+    font-size:30px;
+    font-weight:bold;
+}
+audio{
+outline:none;
+
+}
+.aud{
+top:25%;
+left:50%;
+}
+.contenta .bkdisp{
+text-shadow:1px 5px black;
+background-color:gold;
+text-align:center;
+font-size:50px;
+border:10px dashed orangered;
+font-weight:bold;
+color:black;
+
+}
+.contenta .hd{
+color:gold;
+font-size:40px;
+text-align:center;
+}
+.contenta .bkdisp:hover{
+    background-color:black;
+    border:10px dotted goldenrod;
+    
+}
+.hash{
+    text-shadow:1px 5px silver;
+    text-decoration:none;
+    color:black;
+
+}
+.hash:hover{
+    color:gold;
+}
+body{
+background-color:#FFF0F5;
+/* background:linear-gradient(to right,#4b6cb7,#182848); */
+/* background:linear-gradient(to right,#000000,#434343); */
+
+}
+
+#controls{
+    top:100%;
+    left:50%;
+    border: 8px solid #20B2AA;
+    background-color: #20B2AA;
+    margin: auto;
+    width: 50%;
+}
+
+.mndisp{
+    color:black;
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    }
+
+.mndisp a{
+    text-decoration: none;
+    background-color: black;
+    color: silver;
+    padding: 15px 70px;
+    text-decoration: none;
+    font-weight: bold;
+}
+    #recordingsList a{
+    text-decoration:none;
+    color:gold;
+    padding:12px 12px;
+    background-color:darkblue;
+    font-weight:bold;
+    font-size:20px;
+    border-radius: 20px/50px;
+    transition: all 0.3s ease-out;
+    border: 2px solid #06D85F;
+    }
+    #recordingsList a:hover{
+        background-color:lightblue;
+        color:darkblue;
+    }
+    
+    
+    .but{
+        background-color: black;
+        border-radius: 30px;
+        width:40%;
+        padding:10px 30px;
+        display:block;
+        margin:auto;
+        border:0;
+        /* background:linear-gradient(to right,gold,orange); */
+        outline:none;
+        font-size:15px;
+        font-weight:bold;
+        color:silver;
+        transition: all 0.3s ease-out;
+    }
+    .but:hover{
+    opacity: 0.5;
+    }
+    
+    audio{
+    outline:none;
+    
+    }
+    
+    
+    audio:hover{
+        box-shadow: 3px 3px 3px 3px #98FB98;
+        outline:none;
+        background-color:#20B2AA;
+        border-radius:7px 7px 7px 7px ;
+        transform: scale(1.1);
+    }
+    audio::-webkit-media-controls-play-button{
+        background-color:red;}
+        audio::-webkit-media-controls-play-button:hover{
+            background-color:lawngreen;}
+    /*audio::-webkit-media-controls-timeline{
+            background-color:green;}
+            audio::-webkit-media-controls-volume-slider{
+                background-color:green;
+            }*/
+            audio::-webkit-media-controls-panel{
+                background-color: #20B2AA;
+                /* background:linear-gradient(to right,orange,gold); */
+            }
+.med_title{
+    text-align: center;
+    padding-top: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.vid-btn {
+    background-color:black;
+    color:silver;
+    padding: 15px 25px;
+    text-align:center;
+    font-weight:bold;
+    text-decoration: none;
+  }
+
+.t1{
+    font-weight: bold;
+    top:100%;
+    left:50%;
+    border: 8px solid #20B2AA;
+    background-color: #20B2AA;
+    margin: auto;
+    width: 50%;
+    font-size: 40px;
+}
+
+.t{
+    font-weight: bold;
+    top:100%;
+    left:50%;
+    margin: auto;
+    width: 50%;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.info{
+    left: 50%;
+}
+.info .t{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pred{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+#sw{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.t2{
+    font-weight: bold;
+    top:100%;
+    left:50%;
+    border: 8px solid #20B2AA;
+    background-color: #20B2AA;
+    margin: auto;
+    width: 50%;
+    font-size: 30px;
+    text-align:center;
+}
+.anc{
+text-align:center;
+padding:15px 25px
+}
