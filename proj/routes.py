@@ -18,12 +18,12 @@ vids = ''
 #global dep
 dep=''
 def func(f):
-        with open(r'D:\FallSem_21-22\NLP - CSE4022\flask_cnn\proj\aud.wav','wb') as audio:
+        with open(r'proj\aud.wav','wb') as audio:
             #f.save(audio)
             f.save(audio)
         print('file uploaded successfully')
         r=sr.Recognizer()
-        filename = r"D:\FallSem_21-22\NLP - CSE4022\flask_cnn\proj\aud.wav"
+        filename = r"proj\aud.wav"
         with sr.AudioFile(filename) as source:
         # listen for the data (load audio to memory)
           audio_data = r.record(source)
