@@ -199,7 +199,7 @@ function myCallBack(xhr){
         btn.innerHTML = "VIDEOS";
         btn.type = "submit";
         btn.name = "formBtn";
-        btn.href="http://127.0.0.1:5000/video"
+        btn.href="#"
         ele2.appendChild(btn);
         
         let br2 = document.createElement("br");
@@ -211,7 +211,7 @@ function myCallBack(xhr){
         btn1.innerHTML = "CLINICS";
         btn1.type = "submit";
         btn1.name = "formBtn";
-        btn1.href="http://127.0.0.1:5000/clinics"
+        btn1.href="#"
         ele2.appendChild(btn1);
         console.log(word);
 }

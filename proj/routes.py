@@ -18,12 +18,12 @@ vids = ''
 #global dep
 dep=''
 def func(f):
-        with open(r'D:\FallSem_21-22\NLP - CSE4022\flask_cnn\proj\aud.wav','wb') as audio:
+        with open(r'proj\aud.wav','wb') as audio:
             #f.save(audio)
             f.save(audio)
         print('file uploaded successfully')
         r=sr.Recognizer()
-        filename = r"D:\FallSem_21-22\NLP - CSE4022\flask_cnn\proj\aud.wav"
+        filename = r"proj\aud.wav"
         with sr.AudioFile(filename) as source:
         # listen for the data (load audio to memory)
           audio_data = r.record(source)
@@ -85,52 +85,3 @@ def medical():
 
    return render_template('medical.html',title='medical',request="POST")
 
-@app.route("/video")
-def video():
-   vids = []
-   youtube = build('youtube','v3',developerKey=api_key)
-   req = youtube.search().list(
-      part = "id",
-      type = "video",
-      q = predic
-   ).execute()
-   print("3",predic)
-   for key in req:
-      if(key=="items"):
-         for j in req[key]:
-            vids.append(j["id"]["videoId"])
-   #print(vids)
-   return render_template('ytvid.html',vids=vids)
-
-@app.route("/clinics")
-def clinics():
-   
-   # print(dep)
-   depts={}
-   depts['Dermatologist']=["Fungal infection","Acne","Psoriasis","Impetigo"]
-   depts["Osteopathic medicine"]=["AIDS"]
-   depts["Hepatologists"]=['Alcoholic hepatitis','hepatitis A',"Hepatitis E","Hepatitis D","Hepatitis C","Hepatitis B"]
-   depts["General Physician"]=['Allergy','Chicken pox','Common Cold','Dengue','Drug Reaction','Jaundice','Malaria', 'Migraine','Paralysis ','Typhoid',' Paroymsal Positional Vertigo','Urinary tract infection', 'Varicose veins']
-   depts["Pulmonologist"]=['Pneumonia','Tuberculosis','Bronchial Asthma']
-   depts["Gastroenterologist"]=['Chronic cholestasis','Dimorphic hemmorhoids','GERD','Gastroenteritis','Peptic ulcer diseae']
-   depts["orthopedic"]=[ 'Cervical spondylosis','Arthritis','Osteoarthristis']
-   depts["Endocrinologist"]=['Diabetes ','Hyperthyroidism','Hypoglycemia','Hypothyroidism']
-   depts["Cardiologist"]=['Heart attack','Hypertension ']
-
-   #global dep
-   print(predic[0])
-   for dt,symp in depts.items():
-      for j in symp:
-         if(j==predic[0]):
-            #global dep
-            #print(dt)
-            dep=dt
-
-   conn = psycopg2.connect(database="disclasif", user='postgres', password='praneeth', host='localhost', port= '5432')
-   cursor = conn.cursor()
-   cursor.execute("SELECT id,dept,name,contact,address,hours,rating from clinic WHERE dept=%(dep)s",{'dep':dep})
-   result = cursor.fetchall()
-   print(result[0][2])
-   
-
-   return render_template("clinics.html",title="Clinics",tl=dep,p=predic[0],result=result,categ=result[0][1])
